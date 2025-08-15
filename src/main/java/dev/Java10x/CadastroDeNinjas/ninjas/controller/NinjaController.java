@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+//todo CONTROLLER SÃO AS CLASSES ONDE VOCê IRÁ CONFIGURAR AS ROTAS
 @RestController
 @RequestMapping
 public class NinjaController {
