@@ -26,15 +26,15 @@ public class NinjaController {
 
     //todo adcionar ninja (CREATE)
     @PostMapping("/criar")
-    public String criarNinja(){
+    public NinjaModel criarNinja(@RequestBody NinjaModel ninjaModel){
 
-        return "Ninja Criado";
+        return ninjaServices.criarNinja(ninjaModel);
     }
 
     //todo procurar ninja por ID (READ)
-    @GetMapping("/todosID")
-    public String mostrarNinjasPorId(){
-        return "Ninjas por ID";
+    @GetMapping("/listar/{id}")//PathVariable (onde o usuario incluirá o ID na URL para procurar por ID)
+    public NinjaModel listarNinjasPorId(@PathVariable Long id){
+        return ninjaServices.listarNinjaById(id);
     }
 
     //todo Mostrar todos os ninjas (READ)
